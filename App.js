@@ -1,21 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { View } from "react-native";
 
+import AddTask from "./components/AddTask";
+import Tasks from "./components/Tasks";
+import Brand from "./components/Brand";
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+	const [tasks, setTasks] = React.useState([]);
+	console.log(tasks);
+	return (
+		<View style={{ height: "100%", justifyContent: "flex-start" }}>
+			<AddTask setTasks={setTasks} tasks={tasks} />
+			<Tasks tasks={tasks} />
+			<Brand />
+		</View>
+	);
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
