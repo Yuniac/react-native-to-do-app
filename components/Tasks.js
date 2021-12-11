@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, ScrollView, StyleSheet, Text, View } from "react-native";
 
 function Tasks({ tasks }) {
 	function addItem(todo) {
@@ -11,10 +11,10 @@ function Tasks({ tasks }) {
 	}
 
 	return (
-		<View>
+		<ScrollView>
 			<View style={styles.seperator}></View>
 			<FlatList data={tasks} renderItem={(todo) => addItem(todo)} contentContainerStyle={styles.list}></FlatList>
-		</View>
+		</ScrollView>
 	);
 }
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 	listItem: {
 		backgroundColor: "lightcyan",
 		width: "80%",
-		margin: "1rem 0",
+		marginTop: 10,
 		marginRight: "auto",
 		marginLeft: "auto",
 		padding: 10,
