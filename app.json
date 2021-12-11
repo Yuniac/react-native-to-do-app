@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "project1",
-    "slug": "project1",
+    "name": "to do app",
+    "slug": "to-do-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "The classic to-do app",
+    "githubUrl": "https://github.com/Yuniac/react-native-to-do-app"
   }
 }
