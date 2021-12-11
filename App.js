@@ -9,7 +9,7 @@ export default function App() {
 	console.log(tasks);
 	return (
 		<View style={{ height: "100%", justifyContent: "flex-start" }}>
-			<AddTask setTasks={setTasks} tasks={tasks} />
+			<AddTask setTasks={setTasks} />
 			<Tasks tasks={tasks} />
 			<Brand />
 		</View>

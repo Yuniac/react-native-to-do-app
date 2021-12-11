@@ -11,14 +11,13 @@ const styles = StyleSheet.create({
 	},
 });
 
-function AddTask({ tasks, setTasks }) {
+function AddTask({ setTasks }) {
 	const taskInput = React.useRef(null);
 
 	const saveTask = () => {
 		const newTask = taskInput.current.value;
-		const allTasks = [...tasks, newTask];
 		taskInput.current.value = "";
-		setTasks(allTasks);
+		setTasks((tasks) => [...tasks, newTask]);
 	};
 
 	return (
